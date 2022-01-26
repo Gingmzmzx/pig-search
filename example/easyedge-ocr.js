@@ -4,6 +4,7 @@
  * @描述：ocr使用百度免费的安卓app-easyedge
  * @运行方式：必须使用 “脚本引擎运行”
  *           建议使用 “复制到应用根目录执行”
+ * @猪比版本：1.2.3以上
  * @注意：本实例经测试可以正常运行，如果你运行起来报错，请检查运行配置！
  */
 
@@ -18,7 +19,7 @@ var imgFile = images.read(imgPath);
 
 // 调用easyedge进行OCR
 // 请注意easyedge的使用，参数只有一个是转base64后的图片
-let obj = easyedge(images.toBase64(imgFile));
+let obj = easyedge.ocr(images.toBase64(imgFile));
 
 // 输出ocr结果
 log(obj);
