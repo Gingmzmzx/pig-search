@@ -1,5 +1,5 @@
 /*
- * @版本：1.0
+ * @版本：1.1
  * @最后编辑者：Gingmzmzx
  * @描述：ocr使用百度免费的安卓app-easyedge
  * @运行方式：必须使用 “脚本引擎运行”
@@ -23,3 +23,6 @@ let obj = easyedge.ocr(images.toBase64(imgFile));
 
 // 输出ocr结果
 log(obj);
+
+// 千万不要忘记销毁模型
+easyedge.destroy();
